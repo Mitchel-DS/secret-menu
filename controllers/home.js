@@ -1,5 +1,10 @@
 const home = async (req, res) => {
-    res.render('home')
+	const page = {
+		title: "Home"
+	}
+    res.render('home', {
+		page: page
+	})
 };
 
 module.exports = {
