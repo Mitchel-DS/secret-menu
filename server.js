@@ -11,7 +11,7 @@ app.engine('hbs', engine({
 	partialsDir: __dirname + '/views/partials',
 }));
 
-app.use('/static', express.static('static'));
+app.use('/public', express.static('public'));
 
 const connectDB = require('./config/db');
 require('dotenv').config();

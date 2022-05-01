@@ -1,6 +1,6 @@
 const error = async (req, res) => {
 	const page = {
-		title: "404"
+		title: "Page not found"
 	}
     res.render('error', {
 		page: page

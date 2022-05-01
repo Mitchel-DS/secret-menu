@@ -1,0 +1,21 @@
+<main id="login">
+    <section class="login">
+        <article>
+            <h1>Hi again!</h1>
+            <p>Welcome back, let's get you started.</p>
+        </article>
+
+        <form action="/login" id="homescreen" method="post">
+            <label for="frame">Mail</label>
+            <input type="text" id="mail" name="mail" placeholder="Mail">
+
+            <label for="frame">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+
+            <label id="error"></label>
+            <input id="button" type="submit" value="Inloggen">
+        </form>
+        <p>Don't have a account yet?<a href="/register"> Sign up now!</a></p>
+    </section>
+</main>
+<script src="/public/js/login.js"></script>

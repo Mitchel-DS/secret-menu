@@ -1,0 +1,26 @@
+<main id="register">
+	<section>
+		<article>
+			<h1>Sign up</h1>
+			<p>Let's get you started.</p>
+		</article>
+
+		<form action="/register" method="post">
+
+			<label for="username">Full name</label>
+			<input type="text" id="name" name="name" placeholder="John Doe">
+
+			<label for="mail">mail</label>
+			<input type="mail" id="mail" name="mail" placeholder="user@email.com">
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="password">
+
+			<label id="error"></label>
+
+			<button type="submit">Create account</button>
+
+		</form>
+	</section>
+</main>
+<script src="/public/js/register.js"></script>
