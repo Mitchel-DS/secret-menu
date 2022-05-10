@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -14,7 +15,6 @@ app.engine('hbs', engine({
 app.use('/public', express.static('public'));
 
 const connectDB = require('./config/db');
-require('dotenv').config();
 connectDB();
 
 const bodyParser = require('body-parser');

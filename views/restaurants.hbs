@@ -1,17 +1,13 @@
 <main id="restaurants">
-	<h2>22 results:</h2>
-	<section class="restaurant_card">
-		<img src="/public/images/logo_alt.jpeg" alt="">
-		<h3>Vegan Junk Food Bar</h3>
-		<p>Vegan, Burgers</p>
-		<p>Regulierendwarsstraat</p>
-		<p>rating: </p>
-	</section>
-	<section class="restaurant_card">
-		<img src="/public/images/logo_alt2.jpeg" alt="">
-		<h3>Vegan Junk Food Bar</h3>
-		<p>Vegan, Burgers</p>
-		<p>Regulierendwarsstraat</p>
-		<p>rating: </p>
-	</section>
+	{{#each restaurants}}
+	<article>
+		<h2>{{name}}</h2>
+		<h3>{{category}}</h3>
+		<p>{{rating}}</p>
+
+		<form action="/details" method="post">
+			<input type="submit" name="title" value="{{name}}">
+		</form>
+	</article>
+	{{/each}}
 </main>
