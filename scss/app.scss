@@ -104,6 +104,36 @@ main#restaurants {
 	flex-wrap: wrap;
 }
 
+main#register {
+	.form-container {
+		width: 80%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 50vh;
+		background-color: #f8f9fb;
+		display: flex;
+		border-radius: 10px;
+		box-shadow: 5px 10px 38px rgba(0,0,0,0.2);
+	}
+
+	.form {
+		width: 55%;
+	}
+
+	.form-image {
+		width: 45%;
+	}
+
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 0 10px 10px 0;
+	}
+}
+
 main#error {
 	section {
 		h1 {
