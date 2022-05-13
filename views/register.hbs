@@ -1,38 +1,24 @@
 <main id="register">
 	<section>
 		<article>
-				<h1>Sign up</h1>
-				<p>Let's get you started.</p>
-			</article>
-		<div class="form-container">
-			<div class="form">
-				<form action="/register" method="post">
+			<h1>Sign up</h1>
+			<p>Let's get you started.</p>
+		</article>
+		<form action="/register" method="post">
 
-					<label for="username">Full name</label>
-					<input type="text" id="name" name="name" placeholder="John Doe">
+			<label for="username">Full name</label>
+			<input type="text" id="name" name="name" placeholder="John Doe">
 
-					<label for="mail">mail</label>
-					<input type="email" id="mail" name="mail" placeholder="user@email.com">
+			<label for="mail">mail</label>
+			<input type="email" id="mail" name="mail" placeholder="user@email.com">
 
-					<label for="password">Password</label>
-					<input type="password" id="password" name="password" placeholder="password">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="password">
 
-					<label id="error"></label>
-
-					<button type="submit">Create account</button>
-					<p>Already have an account?<a href="/login"> Login here!</a></p>
-
-				</form>
-			</div>
-
-			<div class="form-image">
-				<img src="/public/images/fyler.jpeg" class="img" alt="">
-			</div>
-		</div>
-
-
-
-
+			<label id="error"></label>
+			<input type="submit" value="Register">
+			<p>Already have an account?<a href="/login"> Login here!</a></p>
+		</form>
 	</section>
 </main>
 <script src="/public/js/register.js"></script>

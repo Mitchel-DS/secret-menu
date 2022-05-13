@@ -8,6 +8,8 @@ const login = require('./login');
 const register = require('./register');
 const profile = require('./profile');
 const details = require('./details');
+const about = require('./about');
+
 
 router.use('/', home);
 router.use('/restaurants', restaurants);
@@ -15,6 +17,8 @@ router.use('/login', login);
 router.use('/register', register);
 router.use('/profile', profile);
 router.use('/details', details);
+router.use('/about', about);
+
 router.use('*', error);
 
 module.exports = router;
