@@ -1,12 +1,21 @@
 <main id="details">
 	{{#each details}}
-	<section>
+	<article>
 		<h2>{{menu_item}}</h2>
 		<h3>{{price}}</h3>
 		<p>{{description}}</p>
-	</section>
-
+	</article>
 	{{/each}}
-	<p>Want to make a quick reservation? <a href="#">Click here!</a></p>
 
+	<p>Want to make a quick reservation? <a href="{{restaurantDetails.reservation}}">Click here!</a></p>
+	<iframe src={{restaurantDetails.directions}}></iframe>
+
+	<h2>Reviews:</h2>
+	{{#each reviews}}
+	<article>
+		<h3>{{user.first_name}} {{user.last_name}} {{rating}}<span>&#11088;</span></h3>
+		<p>{{comment}}</p>
+		<span>{{created}}</span>
+	</article>
+	{{/each}}
 </main>
