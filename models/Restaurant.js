@@ -6,11 +6,14 @@ const RestaurantSchema = new Schema({
 	name: {
 		type: String,
 	},
+	address: {
+		type: String,
+	},
 	category: {
 		type: String,
 	},
 	rating: {
-		type: String,
+		type: Number,
 	}
 });
 

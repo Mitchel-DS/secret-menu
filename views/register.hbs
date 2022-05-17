@@ -6,8 +6,11 @@
 		</article>
 		<form action="/register" method="post">
 
-			<label for="username">Full name</label>
-			<input type="text" id="name" name="name" placeholder="John Doe">
+			<label for="first_name">First name</label>
+			<input type="text" id="first_name" name="first_name" placeholder="John">
+
+			<label for="last_name">Last name</label>
+			<input type="text" id="last_name" name="last_name" placeholder="Doe">
 
 			<label for="mail">mail</label>
 			<input type="email" id="mail" name="mail" placeholder="user@email.com">
@@ -15,7 +18,6 @@
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" placeholder="password">
 
-			<label id="error"></label>
 			<input type="submit" value="Register">
 			<p>Already have an account?<a href="/login"> Login here!</a></p>
 		</form>

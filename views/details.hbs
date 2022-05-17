@@ -5,17 +5,17 @@
 		<h3>{{price}}</h3>
 		<p>{{description}}</p>
 	</article>
-
 	{{/each}}
-	<p>Want to make a quick reservation? <a href="#">Click here!</a></p>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.2227552460563!2d4.889261816177587!3d52.36638077978549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60971b75a3caf%3A0xac7d36df46bac11e!2sVegan%20Junk%20Food%20Bar!5e0!3m2!1snl!2snl!4v1652299111060!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	<p>Want to make a quick reservation? <a href="{{restaurantDetails.reservation}}">Click here!</a></p>
+	<iframe src={{restaurantDetails.directions}}></iframe>
 
 	<h2>Reviews:</h2>
+	{{#each reviews}}
 	<article>
-		<h3>Mitchel Staal 5.0</h3>
-		<p>Very nice looking restaurant! Food was pretty and colorful. Only the service people could've been a little less rude sometimes.</p>
-		<span>Published: Wed 11 May 10:41</span>
-
+		<h3>{{user.first_name}} {{user.last_name}} {{rating}}<span>&#11088;</span></h3>
+		<p>{{comment}}</p>
+		<span>{{created}}</span>
 	</article>
-
+	{{/each}}
 </main>

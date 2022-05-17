@@ -9,6 +9,7 @@ const register = require('./register');
 const profile = require('./profile');
 const details = require('./details');
 const about = require('./about');
+const reviews = require('./review');
 
 
 router.use('/', home);
@@ -18,6 +19,7 @@ router.use('/register', register);
 router.use('/profile', profile);
 router.use('/details', details);
 router.use('/about', about);
+router.use('/reviews', reviews);
 
 router.use('*', error);
 

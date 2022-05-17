@@ -23,14 +23,15 @@ const loginUser = async (req, res) => {
 			const matchPassword = await bcrypt.compare(password, getUser.password) 
 			if (matchPassword) {
 				getUser.password === password;
-				res.redirect('/profile')
+				session = req.session
+				session.authUser = getUser;
+				res.redirect('/restaurants')
 				console.log('Login succesful')
+				console.log(session)
 			} else {
-				//return 'invalid password'
 				console.log('Invalid password')
 			}
 		} else {
-			// return 'user was not found'
 			console.log('User not found.')
 		}
 
@@ -59,18 +60,20 @@ const register = async (req, res) => {
 };
 
 const registerUser = async (req, res) => {
-	const name = req.body.name
+	const first_name = req.body.first_name
+	const last_name = req.body.last_name
 	const mail = req.body.mail
 	const password = req.body.password
 	const hashedPassword = await bcrypt.hash(password, 10)
 
 	try {
 		const newUser = await User.create({
-			name: name,
+			first_name: first_name,
+			last_name: last_name,
 			mail: mail,
 			password: hashedPassword
 		});
-		session = req.session
+
 		let transporter = nodemailer.createTransport({
 			service: 'hotmail',
 			auth: {
@@ -83,7 +86,7 @@ const registerUser = async (req, res) => {
 			from: '"SecretMenu" <mitchel.staal@outlook.com>',
 			to: newUser.mail,
 			subject: 'Welcome to SecretMenu!',
-			text: 'Hello ' + newUser.name + ', your account has been made.',
+			text: 'Hello ' + newUser.first_name + ', your account has been made.',
 		}
 
 		transporter.sendMail(mailOptions, function (err, info) {

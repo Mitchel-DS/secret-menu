@@ -17,6 +17,13 @@ const MenuSchema = new Schema({
 	},
 	price: {
 		type: String,
+	},
+	reservation: {
+		type: String,
+		default: '#'
+	},
+	directions: {
+		type: String,
 	}
 });
 

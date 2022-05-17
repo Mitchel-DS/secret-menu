@@ -4,6 +4,14 @@
 	font-family: GlacialIndifference;
 	src: url('/public/assets/fonts/GlacialIndifference-Regular.otf') format('opentype');
 }
+@font-face {
+	font-family: GlacialIndifferenceItalic;
+	src: url('/public/assets/fonts/GlacialIndifference-Italic.otf') format('opentype');
+}
+@font-face {
+	font-family: GlacialIndifferenceBold;
+	src: url('/public/assets/fonts/GlacialIndifference-Bold.otf') format('opentype');
+}
 
 *,
 *::after,
@@ -112,10 +120,47 @@ main#home {
 main#restaurants {
 	display: flex;
 	flex-wrap: wrap;
+
+	article {
+		width: 100%;
+		max-width: 400px;
+		padding: 50px 30px;
+		margin: 1em;
+		background-color: #fff;
+		color: black;
+		border-radius: 16px;
+
+		h2 {
+			font-family: 'GlacialIndifferenceBold', sans-serif;
+		}
+
+		h3.category {
+			font-family: 'GlacialIndifferenceItalic', sans-serif;
+			font-size: 14px;
+			color: $secondary-color;
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			padding: 15px;
+			border-radius: 8px;
+			font-size: 20px;
+			font-weight: 300;
+			cursor: pointer;
+			margin-top: 1em;
+		}
+	}
 }
 
 main#details {
 	min-height: 100vh;
+
+	iframe {
+		width: 600px;
+		height: 450px;
+		border-style: none;
+	}
 }
 
 main#login {

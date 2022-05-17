@@ -4,10 +4,12 @@ const Schema = mongoose.Schema;
 
 const ReviewSchema = new Schema({
 	restaurant: {
-		type: String,
+		type: Schema.Types.ObjectId, 
+		ref: 'Restaurant' 
 	},
 	rating: {
 		type: Number,
+		default: '1'
 	},
 	comment: {
 		type: String,
@@ -16,8 +18,12 @@ const ReviewSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	user_id: {
+		type: Schema.Types.ObjectId, 
+		ref: 'User' 
+	},
 	user: {
-		type: String,
+		type: Object,
 	}
 });
 
