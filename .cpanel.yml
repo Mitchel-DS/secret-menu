@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/secretme/repositories/secret-menu
+    - export DEPLOYPATH=/home/secretme/domains/secret-menu.nl
     - /bin/cp * $DEPLOYPATH
