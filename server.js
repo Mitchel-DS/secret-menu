@@ -11,6 +11,7 @@ app.engine('hbs', engine({
 	extname: 'hbs',
 	layoutsDir: __dirname + '/views/layouts',
 	partialsDir: __dirname + '/views/partials',
+	helpers: require('./config/hbs-helpers')
 }));
 
 app.use('/public', express.static('public'));

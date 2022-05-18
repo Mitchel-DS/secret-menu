@@ -1,6 +1,6 @@
 <main id="details">
 	{{#each details}}
-	<article>
+	<article class="menu_item">
 		<h2>{{menu_item}}</h2>
 		<h3>{{price}}</h3>
 		<p>{{description}}</p>
@@ -8,14 +8,19 @@
 	{{/each}}
 
 	<p>Want to make a quick reservation? <a href="{{restaurantDetails.reservation}}">Click here!</a></p>
-	<iframe src={{restaurantDetails.directions}}></iframe>
+	<iframe src={{restaurantDetails.directions}}></iframe><br>
+
+	<button><a href="reviews">Write a review</a></button>
 
 	<h2>Reviews:</h2>
-	{{#each reviews}}
-	<article>
-		<h3>{{user.first_name}} {{user.last_name}} {{rating}}<span>&#11088;</span></h3>
-		<p>{{comment}}</p>
-		<span>{{created}}</span>
-	</article>
-	{{/each}}
+	<div>
+		{{#each reviews}}
+		<article class="review">
+			<h3>{{user.first_name}} {{user.last_name}} ({{rating}}<span>&#11088;</span>)</h3>
+			<h3>{{title}}</h3>
+			<p>{{comment}}</p>
+			<p class="date">Reviewed on {{date created 'DD-MM-YYYY'}}</p>
+		</article>
+		{{/each}}
+	</div>
 </main>

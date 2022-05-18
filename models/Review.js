@@ -11,6 +11,9 @@ const ReviewSchema = new Schema({
 		type: Number,
 		default: '1'
 	},
+	title: {
+		type: String,
+	},
 	comment: {
 		type: String,
 	},

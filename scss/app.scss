@@ -25,8 +25,7 @@
 
 $primary-color: #640606;
 $secondary-color: #f09f17;
-$accent-color: #f1a017;
-$text-color: #fff4ea;
+$accent-color: #ffece1;
 $light-color: #fff;
 $dark-color: #000;
 
@@ -34,7 +33,7 @@ body {
 	font-family: 'GlacialIndifference', sans-serif;
 	font-weight: 500;
 	background-color: $primary-color;
-	color: white;
+	color: $light-color;
 }
 
 header {
@@ -46,10 +45,14 @@ header {
 
 	h1 {
 		font-family: 'Niconne', cursive;
-		color: white;
 		font-weight: 100;
 		letter-spacing: 1px;
 		margin-right: auto;
+		cursor: pointer;
+
+		a {
+			color: $secondary-color;
+		}
 	}
 
 	.logo {
@@ -65,7 +68,7 @@ header {
 
 			a {
 				transition: all 0.3s ease 0s;
-				color: white;
+				color: $light-color;
 			}
 
 			a:hover {
@@ -78,7 +81,7 @@ header {
 		padding: 9px 25px;
 		margin-left: 20px;
 		background-color: $secondary-color;
-		color: white;
+		color: $light-color;
 		border: none;
 		border-radius: 50px;
 		cursor: pointer;
@@ -86,7 +89,7 @@ header {
 	}
 
 	button:hover {
-		background-color: white;
+		background-color: $light-color;
 		color: $secondary-color;
 
 	}
@@ -154,12 +157,36 @@ main#restaurants {
 }
 
 main#details {
-	min-height: 100vh;
+	min-height: 100%;
+	margin-bottom: 15em;
 
 	iframe {
 		width: 600px;
 		height: 450px;
 		border-style: none;
+	}
+
+	div {
+		display: flex;
+	}
+
+	article.review {
+		width: 100%;
+		max-width: 400px;
+		padding: 50px 30px;
+		margin: 1em;
+		background-color: #fff;
+		color: black;
+
+		h3 {
+			font-family: 'GlacialIndifferenceBold', sans-serif;
+		}
+
+		p.date {
+			font-family: 'GlacialIndifferenceItalic', sans-serif;
+			font-size: 14px;
+			color: $secondary-color;
+		}
 	}
 }
 
@@ -169,7 +196,7 @@ main#login {
 	justify-content: center;
 
 	article {
-		background: white;
+		background: $light-color;
 		color: $dark-color;
 		border-radius: 16px;
 		padding: 1em;
@@ -188,7 +215,7 @@ main#login {
 		width: 100%;
 		max-width: 400px;
 		padding: 50px 30px;
-		background-image: linear-gradient(to bottom, #00BC7E, #108775);
+		background-image: linear-gradient(to bottom, white, #ffece1);
 		box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
 		border-radius: 16px;
 		margin-bottom: 1em;
@@ -239,18 +266,9 @@ main#login {
 
 		label {
 			display: block;
-			color: white;
+			color: $light-color;
 			margin-bottom: 5px;
 		}
-	}
-
-	.err-msg {
-		padding: 10px 15px;
-		background-color: #fff;
-		border-radius: 8px;
-		margin-bottom: 15px;
-		color: red;
-		box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
 	}
 }
 
@@ -260,7 +278,7 @@ main#register {
 	justify-content: center;
 
 	article {
-		background: white;
+		background: $light-color;
 		color: $dark-color;
 		border-radius: 16px;
 		padding: 1em;
@@ -329,7 +347,7 @@ main#register {
 
 		label {
 			display: block;
-			color: white;
+			color: $light-color;
 			margin-bottom: 5px;
 		}
 	}
@@ -374,7 +392,7 @@ main#error {
 
         button a {
             text-decoration: none;
-			color: white;
+			color: $light-color;
         }
 	}
 }

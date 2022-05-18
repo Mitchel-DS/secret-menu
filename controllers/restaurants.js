@@ -55,6 +55,7 @@ const postReviews = async (req, res) => {
 
 	const rating = req.body.rating
 	const comment = req.body.comment
+	const title = req.body.title
 	const restaurant = await Restaurant.findOne({ name: session.restaurant.restaurant }).lean();
 	const user = await User.findOne({ mail: session.authUser.mail }).lean();
 	console.log(user)
@@ -64,6 +65,7 @@ const postReviews = async (req, res) => {
 		const newReview = await Review.create({
 			restaurant: restaurant._id,
 			rating: rating,
+			title: title,
 			comment: comment,
 			user_id: user._id,
 			user: user
