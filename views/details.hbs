@@ -1,22 +1,26 @@
 <main id="details">
-	{{#each details}}
-	<article class="menu_item">
-		<h2>{{menu_item}}</h2>
-		<h3>{{price}}</h3>
-		<p>{{description}}</p>
-	</article>
-	{{/each}}
+	<h2 class="title">Menu</h2>
+	<div class="menu">
+		{{#each details}}
+		<article class="menu_item">
+			<h2>{{menu_item}}</h2>
+			<h3>{{description}}</h3>
+			<p>{{price}}</p>
+		</article>
+		{{/each}}
+	</div>
 
-	<p>Want to make a quick reservation? <a href="{{restaurantDetails.reservation}}">Click here!</a></p>
+
+	<p class="title">Want to make a quick reservation? <a href="{{restaurantDetails.reservation}}">Click here!</a></p>
 	<iframe src={{restaurantDetails.directions}}></iframe><br>
 
-	<button><a href="reviews">Write a review</a></button>
+	<a href="reviews"><button>Write a review</button></a>
 
-	<h2>Reviews:</h2>
-	<div>
+	<h2 class="title">Reviews:</h2>
+	<div class="reviews">
 		{{#each reviews}}
 		<article class="review">
-			<h3>{{user.first_name}} {{user.last_name}} ({{rating}}<span>&#11088;</span>)</h3>
+			<h3>{{user.first_name}} {{user.last_name}} ({{rating}}<span class="fa fa-star"></span>)</h3>
 			<h3>{{title}}</h3>
 			<p>{{comment}}</p>
 			<p class="date">Reviewed on {{date created 'DD-MM-YYYY'}}</p>

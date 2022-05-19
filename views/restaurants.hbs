@@ -1,14 +1,13 @@
 <main id="restaurants">
 	{{#each restaurants}}
 	<article>
-		<h2>{{name}}</h2>
+		<h2>{{name}}, <span>{{rating}}*</span></h2>
 		<h3>{{address}}</h3>
 		<h3 class="category">{{category}}</h3>
-		<p>{{rating}}</p>
 
 		<form action="/details" method="post">
 			<input type="hidden" name="title" value="{{name}}">
-			<input type="submit" value="Menu">
+			<input type="submit" value="Check menu">
 		</form>
 	</article>
 	{{/each}}
