@@ -86,7 +86,7 @@ const registerUser = async (req, res) => {
 			from: '"SecretMenu" <mitchel.staal@outlook.com>',
 			to: newUser.mail,
 			subject: 'Welcome to SecretMenu!',
-			text: 'Hello ' + newUser.first_name + ', your account has been made. Try looking at some vegan places by going here: secret-menu.nl' + 'Thank your for signin up! Enjoy.',
+			text: 'Hello ' + newUser.first_name + ', your account has been made. Try looking at some vegan places by going here: secret-menu.nl' + ' Thank your for signin up! Enjoy.',
 		}
 
 		transporter.sendMail(mailOptions, function (err, info) {
