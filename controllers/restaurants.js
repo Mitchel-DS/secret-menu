@@ -45,9 +45,15 @@ const reviews = async (req, res) => {
 	const page = {
 		title: "Reviews"
 	}
-	res.render('reviews', {
-		page: page
-	})
+	console.log(session.authUser)
+	if(session.authUser){
+		res.render('reviews', {
+			page: page
+		})
+	} else {
+		res.render('login')
+	}
+	
 };
 
 const postReviews = async (req, res) => {
