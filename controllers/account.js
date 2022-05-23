@@ -75,7 +75,7 @@ const registerUser = async (req, res) => {
 		});
 
 		let transporter = nodemailer.createTransport({
-			service: 'hotmail',
+			service: 'gmail',
 			auth: {
 				user: process.env.MAIL_USER,
 				pass: process.env.MAIL_PASS,
@@ -83,7 +83,7 @@ const registerUser = async (req, res) => {
 		})
 
 		const mailOptions = {
-			from: '"SecretMenu" <mitchel.staal@outlook.com>',
+			from: '"SecretMenu" <secretmenu.nl@gmail.com>',
 			to: newUser.mail,
 			subject: 'Welcome to SecretMenu!',
 			text: 'Hello ' + newUser.first_name + ', your account has been made. Try looking at some vegan places by going here: secret-menu.nl' + ' Thank your for signin up! Enjoy.',
