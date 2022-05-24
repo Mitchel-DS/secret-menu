@@ -40,61 +40,101 @@ body {
 }
 
 header {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 30px 10%;
-	background-color: $primary-color;
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $primary-color;
 
-	h1 {
-		font-family: 'Niconne', cursive;
-		font-weight: 100;
-		letter-spacing: 1px;
-		margin-right: auto;
-		cursor: pointer;
-
-		a {
-			color: $secondary-color;
-		}
-	}
-
-	.logo {
-		cursor: pointer;
-		height: 50px;
-		margin-right: auto;
-	}
-
-	.nav_links {
-		li {
-			display: inline-block;
-			padding: 0px 20px;
-
+		h1 {
+			font-family: 'Niconne', cursive;
+			font-weight: 100;
+			letter-spacing: 1px;
 			a {
-				transition: all 0.3s ease 0s;
-				color: $light-color;
+				color: $secondary-color;
+			}
+		}
+
+		.brad-title {
+			font-size: 1.5rem;
+			margin: 1rem;
+		}
+
+		.navbar-links {
+			ul {
+				margin: 0;
+				padding: 0;
+				display: flex;
 			}
 
-			a:hover {
-				color: $secondary-color
+			li {
+				a {
+					color: white;
+					padding: 1rem;
+					display: block;
+				}
+
+				a.account {
+					color: $secondary-color;
+				}
+
+				a:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+
+		.toggle-button {
+			position: absolute;
+			top: 1.75rem;
+			right: 1rem;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 30px;
+			height: 21px;
+
+			.bar {
+				height: 3px;
+				width: 100%;
+				background-color: white;
+				border-radius: 10px;
 			}
 		}
 	}
 
-	button {
-		padding: 9px 25px;
-		margin-left: 20px;
-		background-color: $secondary-color;
-		color: $light-color;
-		border: none;
-		border-radius: 50px;
-		cursor: pointer;
-		transition: all 0.3s ease 0s;
-	}
+	@media (max-width: 550px) {
+		.toggle-button {
+			display: flex;
+		}
 
-	button:hover {
-		background-color: $light-color;
-		color: $secondary-color;
+		.navbar-links {
+			display: none;
+			width: 100%;
+		}
 
+		.navbar {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.navbar-links {
+			ul {
+				width: 100%;
+				flex-direction: column;
+			}
+
+			li {
+				text-align: center;
+
+				a {
+					padding: .5rem 1rem;
+				}
+			}
+		}
+
+		.navbar-links.active {
+			display: flex;
+		}
 	}
 }
 
@@ -633,3 +673,4 @@ footer {
 		color: #aaa;
 	}
 }
+
