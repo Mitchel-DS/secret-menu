@@ -44,7 +44,7 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: $primary-color;
+		background-color: $secondary-color;
 
 		h1 {
 			font-family: 'Niconne', cursive;
@@ -115,7 +115,6 @@ header {
 		.navbar {
 			flex-direction: column;
 			align-items: flex-start;
-			background-color: $secondary-color;
 		}
 
 		.navbar-links {
