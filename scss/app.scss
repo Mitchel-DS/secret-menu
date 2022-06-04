@@ -57,12 +57,11 @@ header {
 
 		.brad-title {
 			font-size: 1.5rem;
-			margin: 1rem;
+			margin: 1rem 2rem;
 		}
 
 		.navbar-links {
 			ul {
-				margin: 0;
 				padding: 0;
 				display: flex;
 			}
@@ -121,6 +120,7 @@ header {
 			ul {
 				width: 100%;
 				flex-direction: column;
+				margin: 0;
 			}
 
 			li {
@@ -183,11 +183,24 @@ main#home {
 			margin-bottom: 0;
 		}
 	}
+
+	@media (max-width: 550px) {
+		.home {
+			max-width: 350px;
+		}
+	}
+	
 }
 
 main#restaurants {
-	display: flex;
-	flex-wrap: wrap;
+	margin-bottom: 12em;
+
+	div.restaurants {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+	
 
 	article {
 		width: 100%;
@@ -225,6 +238,10 @@ main#restaurants {
 			background-color: $secondary-color;
 			color: white;
 		}
+	}
+
+	@media (max-width: 550px) {
+
 	}
 }
 
@@ -308,6 +325,20 @@ main#details {
 			color: $secondary-color;
 		}
 	}
+
+	@media (max-width: 550px) {
+		iframe {
+			width: 320px;
+		}
+
+		div.menu {
+			width: 320px;
+		}
+
+		article.review {
+			width: 320px;
+		}
+	}
 }
 
 main#login {
@@ -328,6 +359,15 @@ main#login {
 		margin-top: 1em;
 		margin-bottom: 1em;
 		width: 400px;
+
+		h1 {
+			margin-bottom: 10px;
+			color: $secondary-color;
+		}
+
+		p {
+			font-family: 'GlacialIndifferenceItalic';
+		}
 	}
 
 	form {
@@ -396,6 +436,12 @@ main#login {
 			a {
 				color: $secondary-color;
 			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		article {
+			width: 350px;
 		}
 	}
 }
@@ -480,6 +526,10 @@ main#review {
 			margin-bottom: 5px;
 		}
 	}
+
+	@media (max-width: 550px) {
+		
+	}
 }
 
 main#register {
@@ -501,6 +551,15 @@ main#register {
 		margin-top: 1em;
 		margin-bottom: 1em;
 		width: 400px;
+
+		h1 {
+			margin-bottom: 10px;
+			color: $secondary-color;
+		}
+
+		p {
+			font-family: 'GlacialIndifferenceItalic';
+		}
 	}
 
 	form {
@@ -571,6 +630,12 @@ main#register {
 			}
 		}
 	}
+
+	@media (max-width: 550px) {
+		article {
+			width: 350px;
+		}
+	}
 }
 
 main#about {
@@ -580,6 +645,12 @@ main#about {
 
 	img {
 		width: 700px;
+	}
+
+	@media (max-width: 550px) {
+		img {
+			width: 350px;
+		}
 	}
 }
 
@@ -606,6 +677,10 @@ main#error {
 			text-decoration: none;
 			color: $light-color;
 		}
+	}
+
+	@media (max-width: 550px) {
+		
 	}
 }
 
@@ -671,6 +746,10 @@ footer {
 		text-align: center;
 		font-size: 13px;
 		color: #aaa;
+	}
+
+	@media (max-width: 550px) {
+		
 	}
 }
 
