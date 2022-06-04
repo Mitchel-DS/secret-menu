@@ -147,6 +147,7 @@ main#home {
 	background-size: cover;
 	box-shadow: inset 0 0 0 2000px rgba(116, 14, 14, 0.488);
 	height: 80vh;
+	
 
 	.home {
 		width: 100%;
@@ -185,6 +186,8 @@ main#home {
 	}
 
 	@media (max-width: 550px) {
+		margin-bottom: 10em;
+
 		.home {
 			max-width: 350px;
 		}
@@ -440,6 +443,7 @@ main#login {
 	}
 
 	@media (max-width: 550px) {
+		margin-bottom: 20em;
 		article {
 			width: 350px;
 		}
@@ -632,6 +636,7 @@ main#register {
 	}
 
 	@media (max-width: 550px) {
+		margin-bottom: 20em;
 		article {
 			width: 350px;
 		}
