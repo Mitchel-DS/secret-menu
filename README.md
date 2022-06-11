@@ -11,4 +11,4 @@ This is a website for Secret Menu. It's meant to be a website where vegans (and 
 ![About](/public/images/fyler.jpeg)
 
 ## License
-[MIT license](/LICENSE.md) 
+[MIT license.](/LICENSE.md) 
