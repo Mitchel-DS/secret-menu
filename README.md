@@ -1,7 +1,7 @@
 # secret-menu
 Client project for Secret Menu.
 
-[www.secret-menu.nl](https://secret-menu-test.herokuapp.com) -> for showcasing purposes
+[www.secret-menu.nl](https://secret-menu-test.herokuapp.com)
 
 [![Website preview](/public/images/preview_2.png)](https://secret-menu-test.herokuapp.com)
 
