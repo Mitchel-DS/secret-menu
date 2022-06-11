@@ -532,7 +532,10 @@ main#review {
 	}
 
 	@media (max-width: 550px) {
-		
+		margin-bottom: 20em;
+		article {
+			width: 350px;
+		}
 	}
 }
 
