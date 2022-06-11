@@ -2,7 +2,7 @@
 Client project for Secret Menu.
 
 [www.secret-menu.nl](www.secret-menu.nl) -> not live anymore  
-[https://secret-menu-test.herokuapp.com/](www.secret-menu.nl) -> for showcasing purposes
+[www.secret-menu.nl](https://secret-menu-test.herokuapp.com) -> for showcasing purposes
 
 
 
