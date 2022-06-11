@@ -1,7 +1,6 @@
 # secret-menu
 Client project for Secret Menu.
 
-[www.secret-menu.nl](www.secret-menu.nl) -> not live anymore  
 [www.secret-menu.nl](https://secret-menu-test.herokuapp.com) -> for showcasing purposes
 
 
